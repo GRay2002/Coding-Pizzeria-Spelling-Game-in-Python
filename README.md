@@ -1,67 +1,68 @@
-# Coding-Pizzeria-Spelling-Game-in-Python
+Sure! Here's an example of a README file for GitHub:
 
-Introduction
+# Pizzeria Spelling Game
 
-Pizzeria Spelling Game is a fun and educational game to test spelling skills and improve typing proficiency, aim at kids, or people who want to learn English. The goal of the game is to get as many points as possible by spelling ingredients (words) correctly in a time limit. Each round has a certain length depending on the difficulty. Increasing the difficulty of the game shortens the duration of a round and increases the number of words that need to be typed. In turns, players can achieve a higher score due to the extra words.
+Pizzeria Spelling Game is a fun and educational game designed to test spelling skills and improve typing proficiency. It is particularly suitable for kids or individuals who want to learn English. The game challenges players to spell ingredients correctly within a time limit to earn points. As the game progresses, the difficulty increases, adding more words to spell and reducing the round duration.
 
-Game Overview
+## Game Overview
 
-•	The core mechanics of the game are handled by these functions:
-1)	Retrieves words (ingredients from a .txt file) 
- 
-This presents a major advantage, as the list can be easily updated with new words.
-2)	Returns a random word from all the words available. 
- 
-3)	Compares 2 words and returns the number of missing / unmatched letters. Shorter words will be automatically completed with “ * ” in order to be correctly compared. This means any extra letter will be considered a mistake. 
+The core mechanics of the game are handled by several functions:
 
+- `retrieve_words()`: Retrieves words (ingredients) from a .txt file, allowing for easy updates and additions.
+- `get_random_word()`: Returns a random word from the available list.
+- `compare_words()`: Compares two words and returns the number of missing/unmatched letters, considering shorter words as completed with "*".
 
-•	The rest of the code handles how the game works and how is displayed. 
-1)	Defines each difficulty parameters. 
- 
-2)	GUI for Difficulty selection. Here we use grid Layout to arrange the buttons. The windows size is given by the background image size to have a clean look. By keeping each background image size, the same we achieve a coherent and consistent look. The buttons are customized to match with the overall GUI aesthetic.
-coherent look.
+The game logic and display are handled by the rest of the code, which includes:
 
-3)	“new_round()” is where most of the game logic is coded
+- Difficulty selection GUI: Players can choose the desired difficulty level using customized buttons arranged in a grid layout.
+- `new_round()`: Implements most of the game logic, including the countdown for each round. The score and timer are updated accordingly.
+- Music integration: Background music is implemented using the `pygame` library, allowing for easy switching between music files.
+- Button functionality: Each button is associated with specific functionality to enable a smooth gaming experience.
 
-	Each round will start after 3 seconds. We make use of sleep() function to count 1 second of inactivity.
- 
-	 Difficulty Score and time adjustment
-	Start_next_round() calls all the functions needed for one round.
-•	Update score and Timer
- 
- 
-	To have music we choose to use “pygame” library. 
-By making a class Music Player we can switch between music files with ease. We don’t need to make a function for each file.
+## Libraries Used
 
-•	Adding functionality to each button 
+The game utilizes the following libraries:
 
-The libraries we used and why we used them.
+- **tkinter**: Used for creating the graphical user interface (GUI), including buttons, labels, and text entry fields. It enables user interaction and event handling.
+- **pygame**: Employed for playing background music and sound effects during the game, enhancing the overall gaming experience.
+- **random**: Utilized for generating random ingredients for the spelling game.
+- **time**: Imported for using the `sleep()` function to introduce delays and implement timers.
+- **PIL (Python Imaging Library)**: Used for working with images, such as loading and displaying background and visual elements in the game.
+- **os**: Employed for interacting with the operating system, particularly for accessing and playing audio files and managing file paths.
+- **messagebox**: A module of tkinter that provides functions for displaying dialog boxes or message boxes to communicate information or messages to the player.
 
-•	tkinter: tkinter is a Python library for creating graphical user interfaces (GUIs). It provides a set of tools and widgets to build interactive windows and handle user events. In the code, tkinter is used to create the game's GUI, including buttons, labels, and text entry fields. It allows the user to interact with the game by clicking buttons, entering text, and pressing keys. The event-driven nature of tkinter enables the program to respond to user actions by binding event handlers to specific events, such as button clicks or key presses. For example, the "Submit" button is associated with the submit_input() function, which is executed when the button is clicked or the Enter key is pressed.
-•	pygame: pygame is a cross-platform library designed for game development. It provides functionality for graphics rendering, audio playback, and handling user input. In the code, pygame is primarily used for playing background music and sound effects during the game. The MusicPlayer class wraps the functionality of pygame.mixer.music to load and play audio files. By utilizing pygame.mixer.music.play(), the music can be played in an infinite loop. This allows the background music to continue playing throughout the game. Additionally, pygame is used to stop the music when needed, such as when a round is over or the game is finished.
+## Getting Started
 
-Both tkinter and pygame follow an event-driven programming paradigm. They use event loops to continuously monitor for user input events, such as button clicks or key presses. When an event occurs, the associated event handler function is executed, allowing the program to respond accordingly. This event-driven concurrency model enables the game to provide an interactive and responsive user interface while simultaneously performing other tasks, such as updating the score, checking timer expiration, or transitioning between game screens.
+To run the Pizzeria Spelling Game, follow these steps:
 
-Initially we used threads to achieve something similar but there were several downsides.
+1. Ensure you have Python installed on your system.
+2. Clone this repository to your local machine.
+3. Install the required dependencies by running `pip install -r requirements.txt`.
+4. Run the `pizzeria_spelling_game.py` file using Python.
+5. Select the desired difficulty level from the GUI.
+6. Enjoy playing the game and improve your spelling skills!
 
-GUI frameworks, like tkinter, are not designed to be thread-safe. They typically expect GUI-related operations to be performed in the main thread. Using threads for GUI handling can lead to unpredictable behavior or even crashes in certain cases. In addition, pygame and tkinter already have “threads” in their implementation. So we decided to use them instead. 
+## Contributing
 
-•	random: This module provides functions for generating random numbers, choosing random elements from a sequence, and shuffling sequences randomly. In our code, it is used to generate random ingredients for the spelling game.
-•	Time import sleep: The sleep function is used to introduce a delay or pause in the program's execution. It is used in combination time.time() to implement timers and wait for specific durations.
-•	PIL import ImageTk, Image: The PIL (Python Imaging Library) module is used for working with images in various formats. It provides functions to open, manipulate, and display images. In our code, it is used to load and display images as background and visual elements in the game.
-•	import os: The os module provides a way to interact with the operating system. It offers functions to manipulate files and directories, get environment variables, and perform other system-related operations. In our code, it is used for accessing and playing audio files and managing file paths.
-•	messagebox: The messagebox module is a part of the tkinter library and provides functions to display dialog boxes or message boxes to the user. We use it to show information and display messages during the game (Score, Time is up, Round over, etc.)
+Contributions to the Pizzeria Spelling Game are welcome! If you have any ideas, suggestions, or bug fixes, please open an issue or submit a pull request. 
 
-Conclusion 
+When contributing, please ensure that your code adheres to the existing coding style and follows best practices. Additionally, provide a detailed description of the changes you've made and the rationale behind them.
 
-In conclusion, the "Pizzeria Spelling Game" is a small but engaging project designed to help young children improve their typing skills while having fun. The game presents the player with random recipe ingredients, and the player's task is to type them correctly as quickly as possible to earn points and progress to the next round.
+## License
 
-Throughout the development cycle, several key components were implemented. The SpellingCheck function was created to compare the player's input with the generated word and calculate the number of incorrect characters. The ComputeScore function determined the score based on the number of mistakes and the length of the word. A timer was incorporated to add a time constraint.
+The Pizzeria Spelling Game is licensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to use, modify, and distribute the game for personal and commercial purposes. However, the game comes with no warranties or guarantees. Use it at your own risk.
 
-The game features a colorful and user-friendly interface created using the tkinter library. Background music was added using the pygame library to enhance the gaming experience. Additionally, the PIL library was utilized to display images, and the messagebox module from tkinter was employed to provide feedback to the player through dialog boxes.
+## Acknowledgements
 
-To maintain engagement and challenge, the game dynamically adjusted the difficulty as the player progressed. The length of the ingredient vectors increased, and the time allotted for each round decreased. The game concluded after three rounds or when the time is up. 
+We would like to acknowledge the following resources and individuals that contributed to the development of the Pizzeria Spelling Game:
 
-During the development cycle, a collaborative approach was adopted, dividing the tasks among the team members. The code was tested and to ensure smooth gameplay and address game breaking issues.
+- [OpenAI](https://openai.com/) for the training data and the ChatGPT model used to generate this README file.
+- The Python Software Foundation for the Python programming
 
-Overall, the " Pizzeria Spelling Game" offers an enjoyable and educational experience for young players, allowing them to enhance their typing skills in a fun and interactive way. The project demonstrated the effective use of various Python libraries and modules, such as random, time, tkinter, PIL, pygame, and os, with event-driven programming  approach to implement different game functionalities.
+ language and its extensive library ecosystem.
+- The creators and contributors of the tkinter, pygame, random, time, PIL, and os libraries for their excellent work.
+- Our development team members who worked hard to bring this game to life.
+
+## Conclusion
+
+The Pizzeria Spelling Game offers an engaging and educational experience for players to improve their spelling and typing skills. With its user-friendly interface, dynamic difficulty adjustment, and entertaining gameplay, it provides an effective and enjoyable way to enhance language proficiency. Feel free to explore the code, make contributions, and customize the game to suit your needs. Enjoy playing and happy spelling!
