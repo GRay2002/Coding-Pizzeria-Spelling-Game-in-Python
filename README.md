@@ -56,9 +56,6 @@ The Pizzeria Spelling Game is licensed under the [MIT License](https://opensourc
 
 We would like to acknowledge the following resources and individuals that contributed to the development of the Pizzeria Spelling Game:
 
-- [OpenAI](https://openai.com/) for the training data and the ChatGPT model used to generate this README file.
-- The Python Software Foundation for the Python programming
-
  language and its extensive library ecosystem.
 - The creators and contributors of the tkinter, pygame, random, time, PIL, and os libraries for their excellent work.
 - Our development team members who worked hard to bring this game to life.
