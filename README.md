@@ -1,5 +1,3 @@
-Sure! Here's an example of a README file for GitHub:
-
 # Pizzeria Spelling Game
 
 Pizzeria Spelling Game is a fun and educational game designed to test spelling skills and improve typing proficiency. It is particularly suitable for kids or individuals who want to learn English. The game challenges players to spell ingredients correctly within a time limit to earn points. As the game progresses, the difficulty increases, adding more words to spell and reducing the round duration.
